@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .search-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            width: calc(100% - 20px);
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8);
+            outline: none;
+        }
+        .search-container input[type=text]:focus {
+            border-color: #007bff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto 20px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .filme {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .filme img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            cursor: pointer;
+        }
+        .filme .info {
+            padding: 15px;
+        }
+        .filme a {
+            display: block;
+            text-align: center;
+            padding: 8px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .filme a:hover {
+            background-color: #0056b3;
+        }
+
+        #backButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 99999;
+            background-color: rgba(0, 123, 255, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchMovies()" placeholder="Pesquisar filmes...">
+    </div>
+
+    <div class="container" id="moviesContainer">
+        <!-- Os filmes serão carregados aqui -->
+    </div>
+
+    <div id="backButton" onclick="fecharIframe()">Voltar</div>
+
+    <script>
+        let filmesCarregados = 0;
+        const filmesPorPagina = 12;
+
+        async function carregarFilmes() {
+            try {
+                const response = await fetch('filmes.json');
+                const filmes = await response.json();
+                const container = document.getElementById('moviesContainer');
+
+                const filmesParaCarregar = filmes.slice(filmesCarregados, filmesCarregados + filmesPorPagina);
+                filmesParaCarregar.forEach(function(filme) {
+                    const filmeHTML = `
+                        <div class="filme" onclick="assistirFilme('${filme.id}')">
+                            <img src="${filme.imagem}" alt="${filme.nome}">
+                        </div>
+                    `;
+                    container.innerHTML += filmeHTML;
+                });
+
+                filmesCarregados += filmesPorPagina;
+            } catch (error) {
+                console.error('Erro ao carregar os filmes:', error);
+            }
+        }
+
+        async function searchMovies() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+
+            // Verifica se o comprimento do texto de pesquisa é pelo menos 3 caracteres
+            if (filter.length < 3) {
+                return; // Sai da função se for menos de 3 caracteres
+            }
+
+            try {
+                const response = await fetch('filmes.json');
+                const filmes = await response.json();
+                const container = document.getElementById('moviesContainer');
+
+                container.innerHTML = ''; // Limpa o conteúdo atual
+
+                filmes.forEach(function(filme) {
+                    const imgAlt = filme.nome.toUpperCase();
+                    if (imgAlt.indexOf(filter) > -1) {
+                        const filmeHTML = `
+                            <div class="filme" onclick="assistirFilme('${filme.id}')">
+                                <img src="${filme.imagem}" alt="${filme.nome}">
+                            </div>
+                        `;
+                        container.innerHTML += filmeHTML;
+                    }
+                });
+            } catch (error) {
+                console.error('Erro ao buscar os filmes:', error);
+            }
+        }
+
+        function assistirFilme(filmeId) {
+            window.location.href = `https://pixdeta.netlify.app/play.html?id=${filmeId}`;
+        }
+
+        function fecharIframe() {
+            document.getElementById('backButton').style.display = 'none';
+        }
+
+        window.addEventListener('scroll', function() {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                carregarFilmes();
+            }
+        });
+
+        carregarFilmes(); // Chamada inicial da função carregarFilmes
+    </script>
+</body>
+
+</html>
