@@ -1,4 +1,129 @@
 [
+        {
+        "nome": "Tenha Um Bom Luto",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/aaU3NcLJzC1SO9o2hAsosq4Q266.jpg",
+        "id": "tt15331186"
+    },
+    {
+        "nome": "Um Estranho Entre N\u00f3s",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/dWj8Wef74QjRouV9OFhtmGCmqDw.jpg",
+        "id": "tt14402084"
+    },
+    {
+        "nome": "A Av\u00f3",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/ozT3LrHVBiA6IDJcQ28hs0hUAVI.jpg",
+        "id": "tt11807888"
+    },
+    {
+        "nome": "C\u00e3o e Gato",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/cn7yYRFOcNsyRlSgAv3oW3Ubd4p.jpg",
+        "id": "tt18113118"
+    },
+    {
+        "nome": "Anatomia de uma Queda",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/woXYl0DJTx6TsfYWPkSfNHTsoOx.jpg",
+        "id": "tt17009710"
+    },
+    {
+        "nome": "O Livro de Clarence",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/p6rz1Kz9YA9TOVRk0R5OUJhg7ry.jpg",
+        "id": "tt22866358"
+    },
+    {
+        "nome": "Drive My Car",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/z9QqfYRtYS3VqIsWkD09hpilyQ3.jpg",
+        "id": "tt14039582"
+    },
+    {
+        "nome": "Informante",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/tjgvRagGNhSCznCX65w2hOGBOEd.jpg",
+        "id": "tt21391242"
+    },
+    {
+        "nome": "Matador de Aluguel",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/h2xDLj6CtzItwQEFyBjIXh5z3QD.jpg",
+        "id": "tt3359350"
+    },
+    {
+        "nome": "Ted Bundy: Mente Assassina",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/oyfiB4AIQVOKSv2IJcvsNF5wrV.jpg",
+        "id": "tt14538850"
+    },
+    {
+        "nome": "Trilha de Vingan\u00e7a",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/spddh0y6VMwMyDFFAe6NlDxZY3K.jpg",
+        "id": "tt9135272"
+    },
+    {
+        "nome": "Uma Rela\u00e7\u00e3o Delicada",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/kL6Delnmr7RG0Fetgnxb49WMPMQ.jpg",
+        "id": "tt10398080"
+    },
+    {
+        "nome": "Viagem Sombria",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/wOCMbAK7icsr8XrPLJGVbeCkfUg.jpg",
+        "id": "tt14360728"
+    },
+    {
+        "nome": "Pedido Irland\u00eas",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/qmTxQvHnsLpiZQiIZu2hsmZSqR8.jpg",
+        "id": "tt21957774"
+    },
+    {
+        "nome": "Megaloman\u00edaco",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/lsYDsVhZMjrUV5DIUaGrmBj6x6w.jpg",
+        "id": "tt10916810"
+    },
+    {
+        "nome": "Manual Para Um Assassinato",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/yEFhuJHBpqANl0Sp1ZhY1bq9fsO.jpg",
+        "id": "tt24577812"
+    },
+    {
+        "nome": "Mundo C\u00e3o",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/lWo4UzeqzLNTP7joghZm5mSzvyw.jpg",
+        "id": "tt13113298"
+    },
+    {
+        "nome": "Um Pesadelo De Vizinha",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/udZ8rxk05kLiIvtjt9y18zcXabD.jpg",
+        "id": "tt11379322"
+    },
+    {
+        "nome": "A Heran\u00e7a",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/gQdtmJ8zIChKXAA0N1HQ07SgVo6.jpg",
+        "id": "tt10204512"
+    },
+    {
+        "nome": "A Arte de Amar",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/8B5kcNrZUocXZMG80NWhroz94mf.jpg",
+        "id": "tt28355490"
+    },
+    {
+        "nome": "O Garoto de Vidro",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/y57Ys0YIKIgW5P1kpQ713mVVxlX.jpg",
+        "id": "tt12188452"
+    },
+    {
+        "nome": "A Garota Misteriosa",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/9b628PfbxwthMNYDdayNnB4mKnV.jpg",
+        "id": "tt13357462"
+    },
+    {
+        "nome": "Assassinato de Elite",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/wmFJKTkwNBEcz5R099ELCVLfFKb.jpg",
+        "id": "tt27028399"
+    },
+    {
+        "nome": "A Princesa e o Feiti\u00e7o do Tempo",
+        "imagem": "https:\/\/image.tmdb.org\/t\/p\/w300\/t6Q6B0Iv3n9Vrrc4VcYgYS8y28y.jpg",
+        "id": "tt18336268"
+    },
+       {
+        "nome": "24 Horas com Gaspar",
+        "imagem": "https://image.tmdb.org/t/p/w300/wpEbqJ2UYMx1dCgQW6kRgNAlmo4.jpg",
+        "id": "tt14773940"
+    },
      {
         "nome": "Kung Fu Panda 4",
         "imagem": "https://image.tmdb.org/t/p/w300/aNK6MA5EApIo0UJE7ZWSYcZBJKy.jpg",
